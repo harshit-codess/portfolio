@@ -1,0 +1,84 @@
+/* Styles for the small-screen layout only (components/phone).
+   Colours come from the variables in index.css, so light / dark works the same. */
+
+.phone { font-size: 16px; padding: 0 2px; }
+.phone section { scroll-margin-top: 16px; }
+
+/* Header: monogram, email, light/dark */
+.p-header { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.p-home { display: inline-flex; align-items: center; min-height: 44px; }
+.p-icons { display: flex; gap: 8px; }
+.p-icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--text); cursor: pointer; }
+
+/* Hero */
+.p-hero { padding: 28px 0 8px; }
+.p-model { margin-top: 22px; }
+.p-hero h1 { margin: 8px 0 0; font-size: 40px; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; }
+.p-tagline { margin-top: 16px; font-size: 21px; line-height: 1.35; color: var(--sub); }
+.p-tagline em { color: var(--text); }
+.p-pair { display: flex; gap: 8px; }
+.p-pair .btn { flex: 1; min-height: 48px; font-size: 15px; }
+.p-hero .p-pair { margin-top: 24px; }
+
+/* Rounded boxes */
+.p-box { border: 1px solid var(--line2); border-radius: 14px; background: var(--card); box-shadow: var(--shadow); overflow: hidden; }
+
+/* Key figures: 2 x 2 */
+.p-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 28px; }
+.p-figure { padding: 16px; }
+.p-value { margin-top: 10px; font-size: 30px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.p-figure .small { margin-top: 4px; }
+
+/* Section headings */
+.p-heading { margin: 44px 0 14px; display: flex; align-items: baseline; gap: 10px; font-size: 24px; font-weight: 700; letter-spacing: -0.03em; scroll-margin-top: 16px; }
+.p-heading span { font-family: var(--mono); font-size: 12px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+
+/* Description and facts */
+.p-bio { font-size: 17px; line-height: 1.55; color: var(--sub); }
+.p-facts { margin-top: 20px; }
+.p-facts > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 16px; border-top: 1px solid var(--line); }
+.p-facts > div:first-child { border-top: 0; }
+.p-facts dt { flex: none; }
+.p-facts dd { min-width: 0; text-align: right; font-size: 14px; font-weight: 500; }
+
+/* Projects: large screenshot, short text */
+.p-projects { display: flex; flex-direction: column; gap: 16px; }
+.p-projects img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top left; border-bottom: 1px solid var(--line); }
+.p-project-body { padding: 20px 16px; }
+.p-project-body h3 { margin: 4px 0 0; font-size: 28px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.1; }
+.p-desc { margin-top: 8px; color: var(--sub); }
+.p-project-body .tags { margin: 14px 0 18px; }
+
+/* Skills */
+.p-skills > div { padding: 14px 16px; border-top: 1px solid var(--line); }
+.p-skills > div:first-child { border-top: 0; }
+.p-pills { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.p-pill { padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); font-size: 13px; }
+
+/* Experience timeline */
+.p-timeline { margin: 0; padding: 4px 0 0; list-style: none; }
+.p-timeline li { position: relative; margin-left: 6px; padding: 0 0 26px 24px; border-left: 2px solid var(--line); }
+.p-timeline li:last-child { padding-bottom: 0; border-left-color: transparent; }
+.p-timeline li::before { content: ""; position: absolute; left: -8px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line2); }
+.p-timeline li.current::before { background: var(--green); border: 0; box-shadow: 0 0 0 5px var(--green-soft); }
+.p-when { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.p-when .badge { font-family: var(--sans); }
+.p-title { margin-top: 4px; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+.p-org { margin-top: 2px; font-size: 14px; color: var(--sub); }
+
+/* Contact: inverted block */
+.p-contact { margin-top: 44px; padding: 28px 20px; border-radius: 20px; background: var(--text); color: var(--inv); }
+.p-contact-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7; }
+.p-contact-head { margin-top: 12px; font-size: 38px; font-weight: 700; letter-spacing: -0.045em; line-height: 1.02; }
+.p-contact-head em { letter-spacing: -0.02em; font-size: 1em; }
+.p-contact-text { margin-top: 12px; opacity: 0.75; }
+.p-contact-buttons { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
+.p-solid, .p-outline { display: flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 16px; border-radius: 12px; font-family: inherit; font-size: 15px; text-decoration: none; cursor: pointer; overflow-wrap: anywhere; }
+.p-solid { background: var(--inv); color: var(--text); font-weight: 600; border: 0; }
+.p-outline { background: transparent; color: var(--inv); border: 1px solid var(--inv); }
+.p-contact :focus-visible { outline-color: var(--inv); }
+
+/* Footer */
+.p-footer { padding: 20px 0 28px; text-align: center; }
+.p-footer .socials { justify-content: center; gap: 0 20px; }
+.p-copy { margin-top: 4px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
